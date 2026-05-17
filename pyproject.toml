@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptoviz"
+version = "0.1.0"
+description = "Visualize and debug cryptographic Python code via AST + runtime analysis"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.29",
+    "pycryptodome>=3.20",
+    "cryptography>=42",
+]
+
+[project.scripts]
+cryptoviz = "cryptoviz.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cryptoviz*"]
+
+[tool.setuptools.package-data]
+cryptoviz = ["static/**/*"]

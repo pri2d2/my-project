@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: cryptoviz
+Version: 0.1.0
+Summary: Visualize and debug cryptographic Python code via AST + runtime analysis
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.111
+Requires-Dist: uvicorn[standard]>=0.29
+Requires-Dist: pycryptodome>=3.20
+Requires-Dist: cryptography>=42
